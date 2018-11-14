@@ -55,13 +55,15 @@ $ git config --global user.email "you@example.com"
 $ sudo apt-get install git-core
 $ git clone https://github.com/akhilnarang/scripts
 $ cd scripts
-$ ls$ bash setup/<script-name>
+$ ls
+$ bash setup/<script-name>
+Read Scripts Readme to get more infos about scripts
 ```
-Run the script corresponding to your Linux Distribution:
-arch-manjaro-apricity-build-environment-setup.sh - Arch based distros
-ubuntu1604linuxmint18.sh - Ubuntu 16.04 or higher based distros
-ubuntu1404.sh - Ubuntu 14.04
-linuxmint17x.sh - Linux Mint 17.x
+
+
+
+
+
 
 ## Initializing Repo ##
 
@@ -103,9 +105,10 @@ $ cd WORKSPACE
 $ . build/envsetup.sh
 $ lunch
 $ choose your device From the list
-$ brunch device 
-# For Eg Leeco Le max2 code name is x2 so brunch x2
+$ mka bacon
 ```
+
+
 
 ## Thanks list ##
 
@@ -117,6 +120,6 @@ $ brunch device
 ## Getting Help ##
  Please refer <a href="https://forum.xda-developers.com/chef-central/android/guide-android-rom-development-t2814763">this</a> guide from xda
  
- #### More Help ####
- Ask in  <a href="https://t.me/joinchat/HFzBDkV7S-P9oT5eEDO9RQ">Telegram Group</a>
+
+
 
