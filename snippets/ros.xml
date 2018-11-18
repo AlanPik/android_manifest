@@ -22,7 +22,6 @@
   <project path="frameworks/av" name="platform_frameworks_av" groups="pdk" remote="aex" />
   <project path="frameworks/base" name="android_frameworks_base" remote="ros" />
   <project path="frameworks/native" name="platform_frameworks_native" groups="pdk" remote="aex" />
-  <project path="frameworks/opt/net/ims" name="platform_frameworks_opt_net_ims" remote="aex" />
   <project path="frameworks/opt/telephony" name="platform_frameworks_opt_telephony" remote="aex" />
   <project path="frameworks/support" name="platform_frameworks_support" groups="pdk" remote="aex" />
   <project path="hardware/aosp/interfaces" name="platform_hardware_aosp_interfaces" remote="aex" />
@@ -43,7 +42,7 @@
   <project path="prebuilts/build-tools" name="platform_prebuilts_build-tools" remote="aex" />
   <project path="system/bt" name="platform_system_bt" remote="aex" />
   <project path="system/qcom" name="platform_system_qcom" groups="pdk" remote="aex" />
-  <project path="system/core" name="platform_system_core" groups="pdk" remote="ros" />
+  <project path="system/core" name="android_system_core" groups="pdk" remote="ros" />
   <project path="system/extras" name="platform_system_extras" groups="pdk" remote="aex" />
   <project path="system/sepolicy" name="platform_system_sepolicy" groups="pdk" remote="aex" />
   <project path="vendor/codeaurora/telephony" name="platform_vendor_codeaurora_telephony" remote="aex" />
