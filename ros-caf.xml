@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote  name="ctr"
-           fetch="https://github.com/Citrus-CAF"
-           revision="p9x" />
-
-  <remote  name="ros"
-           fetch="https://github.com/revengeos"
-           sync-j="16" />
-
-  <remote  name="github"
-           fetch="https://github.com/" />
-
   <!-- Bionic -->
   <remove-project name="platform/bionic" />
   <project name="bionic" path="bionic" remote="ctr" />
@@ -53,6 +42,7 @@
   <!-- External -->
   <remove-project name="platform/external/ant-wireless/ant_native" />
   <project name="external_ant-wireless_ant_native" path="external/ant-wireless/ant_native" remote="ctr" />
+
   <!--project name="external_DUtils" path="external/DUtils" remote="ctr" /-->
   <remove-project name="platform/external/e2fsprogs" />
   <project name="external_e2fsprogs" path="external/e2fsprogs" remote="ctr" />
@@ -129,7 +119,7 @@
   <project name="packages_apps_Terminal" path="packages/apps/Terminal" remote="ctr" />
   <remove-project name="platform/packages/inputmethods/LatinIME" />
   <project name="packages_inputmethods_LatinIME" path="packages/inputmethods/LatinIME" remote="ctr" />
-
+  
   <!-- Prebuilts -->
   <remove-project name="platform/prebuilts/build-tools" />
   <project name="prebuilts_build-tools" path="prebuilts/build-tools" remote="ctr" clone-depth="1" />
@@ -213,7 +203,6 @@
   <project groups="mirror-aosp-pie-platform-release,pdk-cw-fs,pdk-fs" name="platform/frameworks/layoutlib" path="frameworks/layoutlib" revision="refs/heads/ks-aosp.lnx.1.0.r1-rel" clone-depth="1" />
   <remove-project name="platform/vendor/nxp/opensource/frameworks" />
   <project name="platform/vendor/nxp/opensource/frameworks" path="vendor/nxp/opensource/commonsys/frameworks" revision="refs/heads/nfc.lnx.4.0.r5-rel" clone-depth="1" />
-
   <!-- Citrus-CAF end -->
 
   <!-- Misc repo's for additional compatibility -->
@@ -228,7 +217,6 @@
   <!--remove-project name="platform/packages/apps/MusicFX" />
   <project name="omnirom/android_packages_apps_MusicFX" path="packages/apps/MusicFX" remote="github" revision="android-9.0" />
   <project name="omnirom/android_packages_apps_DSPManager" path="packages/apps/DSPManager" remote="github" revision="android-9.0" /-->
-
   <!-- SDClang repo's from ThankYouMario (AOSPA) -->
   <project name="ThankYouMario/proprietary_vendor_qcom_sdclang-3.9_linux-x86" path="vendor/qcom/sdclang-3.9/linux-x86" remote="github" revision="pie" />
   <project name="ThankYouMario/proprietary_vendor_qcom_sdclang-4.0_linux-x86" path="vendor/qcom/sdclang-4.0/linux-x86" remote="github" revision="pie" />

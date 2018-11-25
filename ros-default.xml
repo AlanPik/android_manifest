@@ -1,37 +1,38 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?> 
 <manifest>
 
-  <remote  name="aosp"
-           fetch="https://android.googlesource.com/" />
-
-  <remote  name="gitlab"
+  <remote name="gitlab"
            fetch="https://gitlab.com/"
            revision="r9.0" />
-  
-  <remove-project name="bionic" />
-  <remove-project name="build" />
-  <remove-project name="platform/external/okhttp" />
-  <remove-project name="frameworks_av" />
-  <remove-project name="frameworks_base" />
-  <remove-project name="frameworks_native" />
-  <remove-project name="external_ant-wireless_ant_native" />
-  <remove-project name="hardware_qcom_power" />
-  <remove-project name="platform/tools/external/gradle" />
-  <remove-project name="packages_apps_Settings" />
-  <remove-project name="packages_apps_CustomSquash" />
-  <remove-project name="packages_services_Telecomm" />
-  <remove-project name="system_core_new" />
-  <remove-project name="platform/vendor/qcom-opensource/interfaces" />
-  <remove-project name="vendor_citrus" />
-  <remove-project name="vendor_qcom-opensource_fm-commonsys" />
-  <remove-project name="platform/vendor/qcom-opensource/power" />
-  
-  <project name="LineageOS/android_hardware_qcom_audio" path="hardware/qcom/audio/msm8996" remote="github" revision="lineage-16.0-caf-8996" />
-  <project name="shivatejapeddi/android_hardware_qcom_display" path="hardware/qcom/display/msm8996" remote="github" revision="citrus" />
-  <project name="LineageOS/android_hardware_qcom_fm" path="hardware/qcom/fm" remote="github" revision="lineage-16.0" />
-  <project name="LineageOS/android_hardware_qcom_media" path="hardware/qcom/media/msm8996" remote="github" revision="lineage-16.0-caf-8996" />
-  <project name="RevengeOS/android_hardware_qcom_power" path="hardware/qcom/power" remote="github" revision="r9.0" />
 
+  <remote name="ctr"
+           fetch="https://github.com/Citrus-CAF"
+           revision="p9x" />
+
+  <remote name="ros"
+           fetch="https://github.com/revengeos"
+           sync-j="16" />
+
+  <remote name="github"
+           fetch="https://github.com/" />
+
+  <remote name="aosp"
+           fetch="https://android.googlesource.com/" />
+
+   <!-- Include forked CAF -->
+  <include name="ros-caf.xml" />
+
+   <!-- Remove unused/forked Projects -->
+  <include name="remove.xml" />
+
+   <!-- Include Hals -->
+  <include name="ros-hals.xml" />
+
+   <!-- AOSP -->
+  <project name="platform/external/okhttp" path="external/okhttp" remote="aosp" revision="refs/tags/android-9.0.0_r10" />
+  <project name="platform/tools/external/gradle" path="tools/external/gradle" remote="aosp" revision="refs/tags/android-9.0.0_r10" />
+    
+   <!-- RevengeOS Projects -->
   <project name="RevengeOS/android_bionic" path="bionic" remote="github" revision="r9.0-caf" />
   <project name="RevengeOS/android_build" path="build/make" remote="github" revision="r9.0-caf" >
     <copyfile dest="Makefile" src="core/root.mk"/>
@@ -42,12 +43,12 @@
     <linkfile dest="build/target" src="target"/>
     <linkfile dest="build/tools" src="tools"/>
   </project>
-  <project name="platform/external/okhttp" path="external/okhttp" remote="aosp" revision="refs/tags/android-9.0.0_r10" />
+
+  <project path="frameworks/aoscp" name="frameworks_aoscp" remote="ros" revision="r9.0" />
   <project name="RevengeOS/android_frameworks_av" path="frameworks/av" remote="github" revision="r9.0-test" />
   <project name="RevengeOS/android_frameworks_base" path="frameworks/base" remote="github" revision="r9.0-test" />
   <project name="RevengeOS/android_frameworks_native" path="frameworks/native" remote="github" revision="r9.0-caf" />
   <project name="RevengeOS/android_external_ant-wireless_ant_native" path="external/ant-wireless/ant_native" remote="github" revision="r9.0-caf" />
-  <project name="platform/tools/external/gradle" path="tools/external/gradle" remote="aosp" revision="refs/tags/android-9.0.0_r10" />
   <project name="RevengeOS/android_packages_apps_Extensions" path="packages/apps/Extensions" remote="github" revision="r9.0" />
   <project name="RevengeOS/android_packages_apps_Recorder" path="packages/apps/Recorder" remote="github" revision="r9.0" />
   <project name="RevengeOS/android_packages_apps_Settings" path="packages/apps/Settings" remote="github" revision="r9.0-caf" />
@@ -57,5 +58,10 @@
   <project path="vendor/gapps" name="Lucchetto/android_vendor_gapps" remote="gitlab" revision="r9.0" />
   <project name="RevengeOS/android_vendor_revengeos" path="vendor/revengeos" remote="github" revision="r9.0-caf" />
   <project name="RevengeOS/android_vendor_revengeui" path="vendor/revengeui" remote="github" revision="r9.0" />
+  <project name="LineageOS/android_hardware_qcom_audio" path="hardware/qcom/audio/msm8996" remote="github" revision="lineage-16.0-caf-8996" />
+  <project name="shivatejapeddi/android_hardware_qcom_display" path="hardware/qcom/display/msm8996" remote="github" revision="citrus" />
+  <project name="LineageOS/android_hardware_qcom_fm" path="hardware/qcom/fm" remote="github" revision="lineage-16.0" />
+  <project name="LineageOS/android_hardware_qcom_media" path="hardware/qcom/media/msm8996" remote="github" revision="lineage-16.0-caf-8996" />
+  <project name="RevengeOS/android_hardware_qcom_power" path="hardware/qcom/power" remote="github" revision="r9.0" />
 
 </manifest>

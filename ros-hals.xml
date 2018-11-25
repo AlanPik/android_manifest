@@ -45,5 +45,4 @@
   <project name="hardware_qcom_display" path="hardware/qcom/display/msm8998" revision="p9x-8998" remote="ctr" />
   <project name="hardware_qcom_media" path="hardware/qcom/media/msm8998" revision="p9x-8998" remote="ctr" />
   <!-- HALS -->
-
 </manifest>

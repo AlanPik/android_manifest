@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+
   <remove-project name="device/common" />
   <remove-project name="device/generic/arm64" />
   <remove-project name="device/generic/armv7-a-neon" />
@@ -47,4 +48,21 @@
   <remove-project name="platform/vendor/qcom/msm8909go" />
   <remove-project name="platform/vendor/qcom/skunk" />
   <remove-project name="platform/vendor/qcom/thulium" />
+  <remove-project name="bionic" />
+  <remove-project name="build" />
+  <remove-project name="platform/external/okhttp" />
+  <remove-project name="frameworks_av" />
+  <remove-project name="frameworks_base" />
+  <remove-project name="frameworks_native" />
+  <remove-project name="external_ant-wireless_ant_native" />
+  <remove-project name="hardware_qcom_power" />
+  <remove-project name="platform/tools/external/gradle" />
+  <remove-project name="packages_apps_Settings" />
+  <remove-project name="packages_apps_CustomSquash" />
+  <remove-project name="packages_services_Telecomm" />
+  <remove-project name="system_core_new" />
+  <remove-project name="platform/vendor/qcom-opensource/interfaces" />
+  <remove-project name="vendor_citrus" />
+  <remove-project name="vendor_qcom-opensource_fm-commonsys" />
+  <remove-project name="platform/vendor/qcom-opensource/power" />
 </manifest>
